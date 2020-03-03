@@ -1,0 +1,38 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &1
+MonoBehaviour:
+  m_ObjectHideFlags: 61
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -514704792, guid: 68c7e4565cde54155bb78d8e935f1ddb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cacheType: 4
+  lastUpdatedAtString: 2020-02-28T17:08:24.116+00:00
+  initializedAtString: 2020-02-28T17:07:43.528+00:00
+  fileLog:
+    path: Assets/Waves/Wave1.asset
+    logEntries:
+    - commitID: 443d020161c16d3b835ff9a34455f309ba7f438e
+      mergeA: 
+      mergeB: 
+      authorName: KhaledBelgasmi
+      authorEmail: 46570185+KhaledBelgasmi@users.noreply.github.com
+      commitEmail: 46570185+KhaledBelgasmi@users.noreply.github.com
+      commitName: KhaledBelgasmi
+      summary: First submission
+      description: 
+      timeString: 2020-02-03T17:53:35.000+00:00
+      commitTimeString: 2020-02-03T17:53:35.000+00:00
+      changes:
+      - path: Assets\Waves\Wave1.asset
+        fullPath: C:\Users\khale\Documents\GitHub\Laser_defender\Assets\Waves\Wave1.asset
+        projectPath: Assets\Waves\Wave1.asset
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
