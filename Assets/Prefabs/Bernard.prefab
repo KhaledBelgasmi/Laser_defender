@@ -113,6 +113,8 @@ MonoBehaviour:
   enemyLaser: {fileID: 5621589156141030859, guid: c6e688168ee34dc45ade96fe17b7ee82,
     type: 3}
   projectileSpeed: 10
+  enemyExplosion: {fileID: 3854771113638642536, guid: b60b9926c6a6a384fb9de123e5ba9b26,
+    type: 3}
 --- !u!58 &58551761213184698
 CircleCollider2D:
   m_ObjectHideFlags: 0

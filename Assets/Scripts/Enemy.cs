@@ -11,6 +11,8 @@ public class Enemy : MonoBehaviour
     [SerializeField] float maxTimeBetweenShots = 3f;
     [SerializeField] GameObject enemyLaser;
     [SerializeField] float projectileSpeed = 10f;
+    [SerializeField] GameObject enemyExplosion;
+    [SerializeField] float durationOfExplosion;
 
     // Start is called before the first frame update
     void Start()
@@ -43,14 +45,13 @@ public class Enemy : MonoBehaviour
         GameObject laser = Instantiate(enemyLaser, transform.position, Quaternion.identity) as GameObject;
         laser.GetComponent<Rigidbody2D>().velocity = new Vector2(0, -projectileSpeed);        
     }
-
-
+    
     // This handles what happens when something collides with the enemy
     private void OnTriggerEnter2D(Collider2D other)
     {
         DamageDealer damageDealer = other.gameObject.GetComponent<DamageDealer>();
         if (!damageDealer) { return; }
-        ProcessHit(damageDealer);
+        ProcessHit(damageDealer);        
     }
 
     private void ProcessHit(DamageDealer damageDealer)
@@ -59,7 +60,15 @@ public class Enemy : MonoBehaviour
         damageDealer.Hit();
         if (health <= 0)
         {
-            Destroy(gameObject);
+            Die();
         }
+    }
+
+    // separate method for death allows multiple hits to be accounted for in gameplay
+    private void Die()
+    {
+        Destroy(gameObject);
+        GameObject explosion = Instantiate(enemyExplosion, transform.position, transform.rotation) as GameObject;
+        Destroy(explosion, durationOfExplosion);
     }
 }
