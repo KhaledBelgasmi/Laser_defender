@@ -115,6 +115,9 @@ MonoBehaviour:
   projectileSpeed: 10
   enemyExplosion: {fileID: 3854771113638642536, guid: b60b9926c6a6a384fb9de123e5ba9b26,
     type: 3}
+  durationOfExplosion: 1
+  enemyExplosionSound: {fileID: 8300000, guid: de2a441d5d890954885cc85e87478335, type: 3}
+  enemyShotSound: {fileID: 8300000, guid: 95172a137843e04448e6ec3033ffb363, type: 3}
 --- !u!58 &58651624450601312
 CircleCollider2D:
   m_ObjectHideFlags: 0

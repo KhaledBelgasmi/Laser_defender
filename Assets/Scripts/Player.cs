@@ -10,11 +10,17 @@ public class Player : MonoBehaviour
     [SerializeField] float moveSpeed = 10f;
     [SerializeField] float padding = 1f;
     [SerializeField] int health = 200;
-
+    [Header ("Sound FX)")]
+    [SerializeField] AudioClip playerExplosionSound;
+    [SerializeField] [Range(0, 1)] float soundFXVolume = 1;
+    [Header ("Visual FX")]
+    [SerializeField] GameObject playerExplosion;
+    [SerializeField] float durationOfExplosion;
     [Header ("Projectile")]
     [SerializeField] GameObject laserPrefab;
     [SerializeField] float projectileSpeed = 10f;
     [SerializeField] float projectileFiringPeriod = 1f;
+
 
     Coroutine firingCoroutine;
 
@@ -50,8 +56,16 @@ public class Player : MonoBehaviour
         damageDealer.Hit();
         if (health <= 0)
         {
-            Destroy(gameObject);
+            Die();
         }
+    }
+
+    private void Die()
+    {
+        Destroy(gameObject);
+        GameObject explosion = Instantiate(playerExplosion, transform.position, transform.rotation) as GameObject;
+        Destroy(explosion, durationOfExplosion);
+        AudioSource.PlayClipAtPoint(playerExplosionSound, Camera.main.transform.position, soundFXVolume);
     }
 
     private void Fire()
