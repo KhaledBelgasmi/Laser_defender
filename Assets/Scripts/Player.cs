@@ -62,10 +62,11 @@ public class Player : MonoBehaviour
 
     private void Die()
     {
+        FindObjectOfType<Level>().LoadGameOver();
         Destroy(gameObject);
         GameObject explosion = Instantiate(playerExplosion, transform.position, transform.rotation) as GameObject;
         Destroy(explosion, durationOfExplosion);
-        AudioSource.PlayClipAtPoint(playerExplosionSound, Camera.main.transform.position, soundFXVolume);
+        AudioSource.PlayClipAtPoint(playerExplosionSound, Camera.main.transform.position, soundFXVolume);        
     }
 
     private void Fire()

@@ -12,7 +12,9 @@ GameObject:
   - component: {fileID: 5661159840484004193}
   - component: {fileID: 114452791881584168}
   - component: {fileID: 114604495880830270}
-  - component: {fileID: 58551761213184698}
+  - component: {fileID: 50355326407991970}
+  - component: {fileID: 58328961076696260}
+  - component: {fileID: 114597555912014874}
   m_Layer: 9
   m_Name: Bernard
   m_TagString: Untagged
@@ -118,7 +120,29 @@ MonoBehaviour:
   durationOfExplosion: 1
   enemyExplosionSound: {fileID: 8300000, guid: de2a441d5d890954885cc85e87478335, type: 3}
   enemyShotSound: {fileID: 8300000, guid: 95172a137843e04448e6ec3033ffb363, type: 3}
---- !u!58 &58551761213184698
+  soundFXVolume: 1
+--- !u!50 &50355326407991970
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1209223059885332947}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!58 &58328961076696260
 CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -128,9 +152,22 @@ CircleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.0037306547, y: 0}
+  m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.37896258
+  m_Radius: 0.465
+--- !u!114 &114597555912014874
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1209223059885332947}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f401db6701f3974682d966e0ef53b47, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 200

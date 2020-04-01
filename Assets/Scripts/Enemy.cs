@@ -30,7 +30,7 @@ public class Enemy : MonoBehaviour
         
     {
         CountDownAndShoot();
-        Debug.Log(shotCounter);
+        //Debug.Log(shotCounter);
     }
 
     private void CountDownAndShoot()
