@@ -5,7 +5,10 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
+    [Header("Enemy Stats")]
     [SerializeField] float health = 100;
+    [SerializeField] int scoreValue = 150;
+    [Header("Enemy shooting")]
     [SerializeField] float shotCounter;
     [SerializeField] float minTimeBetweenShots = 0.2f;
     [SerializeField] float maxTimeBetweenShots = 3f;
@@ -73,6 +76,7 @@ public class Enemy : MonoBehaviour
     // separate method for death allows multiple hits to be accounted for in gameplay
     private void Die()
     {
+        FindObjectOfType<GameSession>().AddToScore(scoreValue);
         Destroy(gameObject);
         GameObject explosion = Instantiate(enemyExplosion, transform.position, transform.rotation) as GameObject;
         Destroy(explosion, durationOfExplosion);
