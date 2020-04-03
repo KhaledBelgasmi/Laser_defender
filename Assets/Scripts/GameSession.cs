@@ -6,6 +6,7 @@ public class GameSession : MonoBehaviour
 {
 
     int score = 0;
+    int playerHealth = 200;
 
     private void Awake()
     {
@@ -41,5 +42,5 @@ public class GameSession : MonoBehaviour
     public void ResetGame()
     {
         Destroy(gameObject);
-    }
+    }    
 }

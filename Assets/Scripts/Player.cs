@@ -69,6 +69,11 @@ public class Player : MonoBehaviour
         AudioSource.PlayClipAtPoint(playerExplosionSound, Camera.main.transform.position, soundFXVolume);        
     }
 
+    public int GetHealth()
+    {
+        return health;
+    }
+
     private void Fire()
     {
         if(Input.GetButtonDown("Fire1"))
